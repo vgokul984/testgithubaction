@@ -4,13 +4,13 @@ jobs:
    job1:
     name: test1
     runs-on: ubuntu:latest
-	steps:
-	  - name: checkout
-        run: date
+    steps:
+    - name: checkout
+      run: date
    job2: 
     name: test2
-	needs: [test1]
-	runs-on: windows-latest
-	steps:
-	  - name: checkout
-        run: date
+    needs: [job1]
+    runs-on: windows-latest
+    steps:
+    - name: checkout
+      run: date
